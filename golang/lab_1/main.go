@@ -41,8 +41,9 @@ func main(){
 				break;
 			}
 		}
-		os.Chmod("./bar/krik",0776);
-		cmd:=exec.Command("./bar/krik","krik");
+		os.Chdir("./bar");
+		os.Chmod("./krik",0776);
+		cmd:=exec.Command("./krik");
 		err = cmd.Run();
 		if(err!=nil){panic(err);}
 		fmt.Println("[*]Создал файл:",file.Name());
