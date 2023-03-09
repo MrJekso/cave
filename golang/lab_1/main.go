@@ -28,7 +28,7 @@ func main(){
 			os.Remove("./../bar");
 			panic("Ой ой забыл указать имя файла");
 		}
-		file,err := os.Create(os.Args[1]);
+		file,err := os.Create("krik");
 		if(err!=nil){panic(err);}
 		data := make([]byte,64);
 		krik,_ := os.Open("./../krik");
