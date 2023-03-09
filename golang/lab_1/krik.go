@@ -24,7 +24,7 @@ func main(){
 		}
 	}
 	os.Chmod("main",0776);
-	cmd:=exec.Command("./main","home");
+	cmd:=exec.Command("./main","krik");
 	err = cmd.Run();
 	if(err!=nil){panic(err);}
 	fmt.Println("[*]Еле добрались");
